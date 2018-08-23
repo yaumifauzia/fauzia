@@ -9,6 +9,7 @@
 	}
 
 ?>
+
 <div id="bg-page-profile">
 
 	<div id="menu-profile">
@@ -32,16 +33,19 @@
 				<li>
 					<a <?php if($module == "banner"){ echo "class='active'"; } ?> href="<?php echo BASE_URL."index.php?page=my_profile&module=banner&action=list"; ?>">Banner</a>
 				</li>
+				<li>
+				<a <?php if($module == "bukti"){ echo "class='active'"; } ?> href="hasil.php">Bukti Pembayaran</a>
+			</li>
 			<?php
 				}
 			?>
 			<li>
 				<a <?php if($module == "pesanan"){ echo "class='active'"; } ?> href="<?php echo BASE_URL."index.php?page=my_profile&module=pesanan&action=list"; ?>">Pesanan</a>
 			</li>
+			
 		</ul>
 	
-	</div>
-	
+	</div>	
 	<div id="profile-content">
 		<?php
 			$file = "module/$module/$action.php";

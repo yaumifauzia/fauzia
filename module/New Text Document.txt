@@ -1,0 +1,28 @@
+<?php
+
+	$pesanan_id = $_GET["pesanan_id"];
+	$gambar = "";
+	$keterangan_gambar = "";
+
+?>
+
+
+<table class="table-list">
+
+	<form action="../bukti/bukti.php" method="POST">
+	
+		<div class="element-form">
+			<label>BUKTI PEMBAYARAN <?php echo $keterangan_gambar; ?></label>
+			<br>	
+			<span>
+				<input type="file" name="file" /> <?php echo $gambar; ?>
+			</span>
+		</div>		
+
+		<div class="element-form">
+			<span><input type="submit" value="Konfirmasi" name="button" /></span>
+		</div>		
+	
+	</form>
+
+</table>

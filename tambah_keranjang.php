@@ -19,3 +19,6 @@
 	$_SESSION["keranjang"] = $keranjang;
 	
 	header("location:".BASE_URL);
+	?>
+
+	

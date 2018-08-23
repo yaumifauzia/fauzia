@@ -1,3 +1,10 @@
+
+<div class="btn btn-primary">
+<a href="tambah.php" class="button">TAMBAH BARANG</a>
+</div>
+
+<br>
+
 <?php
 	if($totalBarang == 0){
 		echo "<h3>Saat ini belum ada data di dalam keranjang belanja anda</h3>";
@@ -56,6 +63,7 @@
 
 ?>
 
+
 <script>
 
 	$(".update-quantity").on("input", function(e){
@@ -74,3 +82,5 @@
 	});
 
 </script>
+
+

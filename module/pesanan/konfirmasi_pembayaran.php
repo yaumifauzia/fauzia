@@ -1,32 +1,35 @@
-<?php
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body>
+<div class="row">
+<div class="col-md-4"></div>
+<div class="col-md-4">
+<form action="<?php echo BASE_URL."module/pesanan/upload.php?"; ?>" method="post" enctype="multipart/form-data" name="form1" id="form1">
+<div class="form-group">
+<label >Nama</label>
+<input type="text" class="form-control" name="nama">
+</div>
+<div class="form-group">
+<label>Jumlah Transfer</label>
+<input type="text" class="form-control" name="transfer">
+</div>
+<div class="form-group">
+<label>Bank</label>
+<input type="text" class="form-control" name="bank">
+</div>
+<div class="form-group">
+<p>Pilih File Gambar : <br/><input type='file' name='filegbr' id='Filegambar'></p>
 
-	$pesanan_id = $_GET["pesanan_id"];
+</div>
+<div class="form-group">
+<input type="submit" name="Submit" value="Upload" />
+</div>
+</form>
+</div>
+<div class="col-md-4"></div>
+</div>
 
-?>
-
-<table class="table-list">
-
-	<form action="<?php echo BASE_URL."module/pesanan/action.php?pesanan_id=$pesanan_id"; ?>" method="POST">
-	
-		<div class="element-form">
-			<label>Nomor Rekening</label>
-			<span><input type="text" name="nomor_rekening" /></span>
-		</div>	
-
-		<div class="element-form">
-			<label>Nama Account</label>
-			<span><input type="text" name="nama_account" /></span>
-		</div>		
-	
-		<div class="element-form">
-			<label>Tanggal Transfer (format: yyyy-mm-dd)</label>
-			<span><input type="text" name="tanggal_transfer" /></span>
-		</div>	
-
-		<div class="element-form">
-			<span><input type="submit" value="Konfirmasi" name="button" /></span>
-		</div>		
-	
-	</form>
-
-</table>
+</body>
+</html>

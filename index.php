@@ -1,6 +1,6 @@
 <?php
 
-	session_start();
+	session_start();	
 
 	include_once("function/koneksi.php");
 	include_once("function/helper.php");
@@ -14,17 +14,25 @@
 	$keranjang = isset($_SESSION['keranjang']) ? $_SESSION['keranjang'] : array();
 	$totalBarang = count($keranjang);
 
+
+
 ?>
 
 <!DOCTYPE html>
 <html>
 
 	<head>
+		 <meta charset="utf-8" />
+   		 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>rumah tenun</title>
-		
+		<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+  		<link rel="stylesheet" type="text/css" href="assets/js/jquery-ui/jquery-ui.css">			
 		<link href="<?php echo BASE_URL."css/style.css"; ?>" type="text/css" rel="stylesheet" />
 		<link href="<?php echo BASE_URL."css/banner.css"; ?>" type="text/css" rel="stylesheet" />
-		
+		<script type="text/javascript" src="assets/js/jquery.js"></script>
+		  <script type="text/javascript" src="assets/js/jquery.js"></script>
+		  <script type="text/javascript" src="assets/js/bootstrap.js"></script>
+		  <script type="text/javascript" src="assets/js/jquery-ui/jquery-ui.js"></script>  
 		<script src="<?php echo BASE_URL."js/jquery-3.1.1.min.js"; ?>"></script>
 		<script src="<?php echo BASE_URL."js/Slides-SlidesJS-3/source/jquery.slides.min.js"; ?>"></script>
 		
@@ -43,7 +51,7 @@
 	</head>
 
 	<body>
-	
+		
 		<div id="container">
 			<div id="header">
 				<a href="<?php echo BASE_URL."index.php"; ?>">
@@ -59,13 +67,14 @@
 									  <a href='".BASE_URL."logout.php'>Logout</a>";
 							}else{
 								echo "<a href='".BASE_URL."index.php?page=login'>Login</a>
-									 <a href='".BASE_URL."index.php?page=register'>Register</a>";
+									 <a href='".BASE_URL."index.php?page=register'>Register</a>
+									 <a href='".BASE_URL."awal.php?page=home'>Home</a>";
 							}
 						?>
 					</div>
 					
 					<a href="<?php echo BASE_URL."index.php?page=keranjang"; ?>" id="button-keranjang">
-						<img src="<?php echo BASE_URL."images/cart.png"; ?>" /> 
+						<img src="<?php echo BASE_URL."images/cart.png"; ?>" /> 					
 						<?php
 							if($totalBarang != 0){
 								echo "<span class='total-barang'>$totalBarang</span>";

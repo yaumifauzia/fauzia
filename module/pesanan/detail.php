@@ -108,6 +108,6 @@
 		<p>Silahkan Lakukan pembayaran ke Bank BNI<br/>
 		   Nomor Account : 0000-9999-8888 (A/N Fauzia).<br/>
 		   Setelah melakukan pembayaran silahkan lakukan konfirmasi pembayaran 
-		   <a href="<?php echo BASE_URL."index.php?page=my_profile&module=pesanan&action=konfirmasi_pembayaran&pesanan_id=$pesanan_id"?>">Disini</a>.
+		   <a href="mula.php">Disini</a>.
 		</p>
 	</div>
